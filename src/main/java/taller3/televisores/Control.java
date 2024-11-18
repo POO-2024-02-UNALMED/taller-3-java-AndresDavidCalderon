@@ -22,29 +22,11 @@ public class Control {
     }
 
     public void setCanal(int canal){
-        if (canal>=1 && canal<=120){
-            while (tv.getCanal()!=canal){
-                if (tv.getCanal()>canal){
-                    tv.canalDown();
-                }
-                if (tv.getCanal()<canal){
-                    tv.canalUp();
-                }
-            }
-        }
+        tv.setCanal(canal);
     }
 
     public void setVolumen(int volumen){
-        if (volumen>=0 && volumen<=7){
-            while(tv.getVolumen()!=volumen){
-                if(tv.getVolumen()>volumen){
-                    tv.volumenDown();
-                }
-                if (tv.getVolumen()<volumen){
-                    tv.volumenUp();
-                }
-            }
-        }
+        tv.setVolumen(volumen);
     }
 
     public void enlazar(TV tvObjetivo){
