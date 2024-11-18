@@ -75,25 +75,25 @@ public class TV {
     }
 
     public void canalUp(){
-        if (canal<120){
+        if (canal<120 && estado){
             this.canal +=1;
         }
     }
 
     public void canalDown(){
-        if (canal > 1){
+        if (this.canal > 1 && this.estado){
             this.canal-=1;
         }
     }
 
     public void volumenUp(){
-        if (volumen < 7){
+        if (this.volumen < 7 && estado){
             this.volumen+=1;
         }
     }
 
     public void volumenDown(){
-        if (volumen > 0){
+        if (volumen > 0 && estado){
             this.volumen-=1;
         }
     }
