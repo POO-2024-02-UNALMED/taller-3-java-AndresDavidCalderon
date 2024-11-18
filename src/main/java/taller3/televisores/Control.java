@@ -34,6 +34,19 @@ public class Control {
         }
     }
 
+    public void setVolumen(int volumen){
+        if (volumen>=0 && volumen<=7){
+            while(tv.getVolumen()!=volumen){
+                if(tv.getVolumen()>volumen){
+                    tv.volumenDown();
+                }
+                if (tv.getVolumen()<volumen){
+                    tv.volumenUp();
+                }
+            }
+        }
+    }
+
     public void enlazar(TV tvObjetivo){
         this.tv = tvObjetivo;
         tvObjetivo.setControl(this);
